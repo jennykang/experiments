@@ -19,6 +19,7 @@ int main () {
 
 	shift = decrypt(buffer);
 	if (shift != -1) {
+		printf("Match found ;u;! \n")
 		decipher(buffer, result, size, shift);
 		printf("result: %s\n", result);
 
