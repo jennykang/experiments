@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 
 void getLine (char s[], int size);
 void decipher (char s[], char result[], int size, int shift);
@@ -19,7 +19,7 @@ int main () {
 
 	shift = decrypt(buffer);
 	if (shift != -1) {
-		printf("Match found ;u;! \n")
+		printf("Match found ;u;! \n");
 		decipher(buffer, result, size, shift);
 		printf("result: %s\n", result);
 
@@ -144,7 +144,7 @@ void decipher (char s[], char result[], int size, int shift){
 			result[i] = s[i] + shift - ('Z' - 'A' + 1);
 		}
 
-		else result[i] = s[i] + shift;	
+		else result[i] = s[i] + shift;
 	}
 
 	result[i] = '\0';
